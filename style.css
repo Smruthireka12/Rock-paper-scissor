@@ -1,0 +1,94 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1), 
+              url('assets/bg-animation.gif');
+  background-size: 400% 400%, cover;
+  animation: gradientMove 15s ease infinite;
+  z-index: -1;
+  opacity: 0.4;
+  filter: blur(8px);
+}
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.game-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.choice {
+  font-size: 2rem;
+  padding: 15px;
+  border-radius: 50%;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.choice:hover {
+  transform: scale(1.2);
+  background: #45a049;
+}
+
+#result {
+  font-size: 1.3rem;
+  margin: 20px;
+}
+
+#reset {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+}

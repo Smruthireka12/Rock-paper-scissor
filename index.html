@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="game-container">
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="score-board">
+      <div>Player: <span id="player-score">0</span></div>
+      <div>Computer: <span id="computer-score">0</span></div>
+    </div>
+
+    <div class="choices">
+      <button class="choice" data-choice="rock">✊</button>
+      <button class="choice" data-choice="paper">✋</button>
+      <button class="choice" data-choice="scissors">✌️</button>
+    </div>
+
+    <div id="result">Make your move!</div>
+
+    <button id="reset">🔁 Reset Game</button>
+  </div>
+
+  <!-- Sound effects -->
+  <audio id="win-sound" src="assets/win.mp3"></audio>
+  <audio id="lose-sound" src="assets/lose.mp3"></audio>
+  <audio id="draw-sound" src="assets/draw.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
